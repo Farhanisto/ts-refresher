@@ -21,12 +21,19 @@ export class CustomMap {
   }
 
   addMarker(mapable: Mapable): void {
-    new google.maps.Marker({
+    let marker = new google.maps.Marker({
       map: this.googleMap,
       position: {
         lat: mapable.location.lat,
         lng: mapable.location.lng
       }
+    })
+    marker.addListener('click', () => {
+      let notifier = new google.maps.InfoWindow({
+        content: 'hello'
+      })
+      notifier.open(this.googleMap, marker)
+
     })
   }
 
