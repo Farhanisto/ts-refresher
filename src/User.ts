@@ -1,4 +1,5 @@
 import faker from 'faker'
+import { Mapable } from './CustomMap'
 
 export class User {
   name: string

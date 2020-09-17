@@ -1,7 +1,7 @@
 import { User } from './User'
 import { Company } from './Company'
 
-interface Mapable {
+export interface Mapable {
   location: {
     lat: number,
     lng: number
