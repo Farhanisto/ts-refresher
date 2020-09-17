@@ -5,4 +5,8 @@ import { CustomMap } from './CustomMap'
 console.log('hi farhan')
 console.log(new User())
 console.log(new Company())
-new CustomMap('map')
+let userMarker = new CustomMap('map')
+userMarker.addMarker(new User())
+userMarker.addMarker(new Company())
+
+
